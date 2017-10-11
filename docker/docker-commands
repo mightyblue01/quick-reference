@@ -1,0 +1,38 @@
+Docker 
+
+(1) Pull an image as follows -
+    docker pull jupyter/all-spark-notebook 
+
+(2) Command to execute on the docker container -
+    docker exec -it <command>
+    docker exec -it <mycontainer> bash   (this will let you inside the docker container shell)
+        
+(3) Restart a container -
+    docker restart <name>
+
+(4) Copy a file from local to docker container -
+    docker cp filename containername:/home/path/filename
+    
+(5) List all images 
+    docker images -a 
+    
+(6) Delete specific image
+    docker rmi -f xxxx
+    
+(7) Create a container
+    docker run img-name (will stop after creation)
+    docker run -dit img-name (will continue running)
+    
+(8) Start a container
+    docker start c_name
+    
+(9) Stop a container
+    docker stop c_name
+    
+(10) Delete a container
+    docker rm c_name
+    
+(11) List all running containers
+    docker ps
+(12) List all containers (running and stopped)
+    docker ps -a
