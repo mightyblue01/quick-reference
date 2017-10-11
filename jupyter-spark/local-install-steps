@@ -1,0 +1,38 @@
+Quick Jupyter setup with Spark
+
+(1) Install Anaconda 
+(2) Downgrade to python 3.5
+(3) Generate the config file 
+    jupyter notebook --generate-config  (generates config file at ~/.jupyter/)
+(4) Enable following for open access (access from anywhere without any token or password)
+    
+    c.NotebookApp.ip = '*
+    c.NotebookApp.open_browser = False
+    c.NotebookApp.port = 8888
+    c.NotebookApp.token = ''
+    c.NotebookApp.password = ''
+    
+(5) Now, jupyter can be run from any browser.
+(6) Copy spark to a directory.
+(7) Add paths to .profile(ubuntu) or .bash_profile(macos) as follows -
+
+    # added by Anaconda3 4.4.0 installer
+    export PATH="/Users/user123/anaconda/bin:$PATH"
+
+    #for Spark
+    export SPARK_PATH=~/Documents/Root/core/spark-2.2.0-bin-hadoop2.7
+    export PYSPARK_DRIVER_PYTHON="jupyter"
+    export PYSPARK_DRIVER_PYTHON_OPTS="notebook"
+
+    #For python 3, You have to add the line below or you will get an error
+    # export PYSPARK_PYTHON=python3
+    alias snotebook='$SPARK_PATH/bin/pyspark --master local[2]'
+(8) Now, open an jupyter notebook (python3) and add the following -
+
+    import findspark
+    findspark.init()
+    import pyspark
+    sc = pyspark.SparkContext()
+
+
+
