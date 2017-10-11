@@ -4,7 +4,7 @@
     docker pull jupyter/all-spark-notebook
 
 (2) Spawn the docker container out of the image (if image is downloaded using "pull" command) -
-    docker run -dit img-name 
+    docker run -it --rm -p 8888:8888 jupyter/all-spark-notebook 
         
 (3) To access from local host machine, get into the docker container- 
     docker exec -it <mycontainer> bash
