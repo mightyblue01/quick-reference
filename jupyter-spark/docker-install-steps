@@ -1,0 +1,20 @@
+(1) Install the all-spark-notebook as follows -
+    docker run -d -p 8888:8888 jupyter/all-spark-notebook 
+                  OR
+    docker pull jupyter/all-spark-notebook
+
+(2) Spawn the docker container out of the image (if image is downloaded using "pull" command) -
+    docker run -dit img-name 
+        
+(3) To access from local host machine, get into the docker container- 
+    docker exec -it <mycontainer> bash
+
+(4) Now, inside the container, generate the config file 
+    jupyter notebook --generate-config  (generates config file at ~/.jupyter/)
+(5) Open jupyter config file(jupyter_notebook_config.py) and enable following for open access (to access from anywhere without any token or password)
+    
+    c.NotebookApp.ip = '*
+    c.NotebookApp.open_browser = False
+    c.NotebookApp.port = 8888
+    c.NotebookApp.token = ''
+    c.NotebookApp.password = ''
