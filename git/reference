@@ -1,0 +1,64 @@
+
+USER SPECIFIC
+git config --global user.name "xxx"
+git config --global user.email "xxx"
+
+git init
+(1) Add a remote repo locally 
+git remote add origin <URL.git>
+(2) Create a new branch
+git checkout -b new_branch
+(3) Pull into the new branch
+git pull origin master
+(4) 
+
+
+For a branch (Pull a new branch and push back with new file/s) ::
+(Given that a branch already exists on remote Git)
+git init
+git remote add new_branch <URL.git>  
+git pull new_branch new_branch
+git checkout new_branch
+<after creating a new file e.g. a.txt>
+git add a.txt
+git commit -m "message" 
+git push new_branch new_branch
+
+
+For a private repository :: 
+git init
+git clone -b <branch_name> remote_URL  :: using credentials => git clone -b <branch> https://usernmae@github.com/AGLEnergy/data-platform-etl-framework.git
+
+
+git clone -b master https://username@github.com/xxxx/energy-insights-model.git
+
+
+https://github.com/xyz/energy-insights-model/tree/energy-insights-docker
+
+<add new files>
+git add . or names
+git commit -m "comments"
+git push remote_URL <local_name>
+
+
+git clone -b master https://user123@github.com/AGLEnergy/data-platform-etl-jobs-non-spark.git
+
+
+git clone -b master https://user123@github.com/AGLEnergy/energy-insights-model.git
+
+checkout a repo
+clone a repo
+branch a repo
+
+add new files
+commit files
+push files
+
+status 
+difference
+
+pull request
+merge request
+
+
+ 
