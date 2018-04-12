@@ -61,4 +61,19 @@ pull request
 merge request
 
 
- 
+ (1) Generate the key 
+    ssh-keygen -t rsa -b 4096 -C "email id" 
+(2) Add to ssh agent 
+    Start the ssh-agent in background - 
+    eval "$(ssh-agent -s)"
+    
+    Add following in ~/.ssh/config 
+    Host *
+    AddKeysToAgent yes
+    UseKeychain yes
+    IdentityFile ~/.ssh/id_rsa
+(4) Add the SSH private key to ssh-agent and store the passph
+    ssh-add -K ~/.ssh/id_rsa
+    
+(5) Add the SSH key to github account
+
