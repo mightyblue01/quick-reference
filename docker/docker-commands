@@ -34,5 +34,13 @@ Docker
     
 (11) List all running containers
     docker ps
+
 (12) List all containers (running and stopped)
-    docker ps -a
+    docker ps -a   
+
+(13) Save image as tar file 
+    docker save -o <path for generated tar file> <image name>
+
+(14) Load the image (another machine) 
+    docker load -i <path to image tar file>
+
