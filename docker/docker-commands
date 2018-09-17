@@ -30,17 +30,20 @@ Docker
     docker stop c_name
     
 (10) Delete a container
-    docker rm c_name
+     docker rm c_name
     
 (11) List all running containers
-    docker ps
+     docker ps
 
 (12) List all containers (running and stopped)
-    docker ps -a   
+     docker ps -a   
 
 (13) Save image as tar file 
-    docker save -o <path for generated tar file> <image name>
+     docker save -o <path for generated tar file> <image name>
 
 (14) Load the image (another machine) 
-    docker load -i <path to image tar file>
+     docker load -i <path to image tar file>
 
+(15) Run docker container with a folder shared with host 
+     docker run --rm -v "$PWD":/home -w /home <img_name> 
+     (assuming container has a directory /home in this example)
