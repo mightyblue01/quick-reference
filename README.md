@@ -1,2 +1,2 @@
 # quick-reference
-useful stuff for a quick lookup
+Useful stuff for a quick lookup
