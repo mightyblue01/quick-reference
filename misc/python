@@ -1,0 +1,11 @@
+(1) Remove python (e.g. 2.x)
+    sudo apt purge python
+    sudo apt autoremove
+(2) Pre-requisites (e.g. Python3.5.7)
+    apt-get install make build-essential libssl-dev zlib1g-dev libbz2-dev libsqlite3-dev
+    Download Python3.5.7 and execute following inside extracted directory - 
+    sudo ./configure
+    make altinstall
+(3) alias python=python3.5
+
+    
