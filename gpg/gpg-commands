@@ -4,6 +4,8 @@ gpg --list-secret-keys
 
 gpg --export-secret-keys -a > filename 
 gpg --export -a  > filename
+* In case gpg key is exported as binary format by default, following parameter(--armor) will export it in ascii format.
+gpg --armor --export -a > filename
 
 gpg --import key-name
 gpg -d input-filename > output-filename
