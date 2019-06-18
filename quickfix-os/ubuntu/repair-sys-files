@@ -1,0 +1,9 @@
+Boot into Ubuntu recovery mode and access the file system as root in write mode.
+
+Hold 'Shift' while the machine is starting up to load up GNU GRUB
+Start up Ubuntu in recovery mode
+Choose "Drop To Root Shell Prompt'
+By default, this will allow to access the file system in read-only mode
+Switch to read/write mode by executing this:
+    $ mount -o remount,rw /
+Fix required files.
