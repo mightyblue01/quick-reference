@@ -9,3 +9,13 @@
 (3) alias python=python3.5
 
     
+(A) Basic
+with open() as input:
+    input.read().split()
+    
+(B) re utils
+re.compile(r'exp').findall(infile.read().lower())
+        
+(C) Packages/Utils
+Counter(tags).most_common(TOP_NUMBER)
+score = SequenceMatcher(None,i,j).ratio()
