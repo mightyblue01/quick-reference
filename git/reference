@@ -15,15 +15,23 @@ git pull origin master
 Examples- 
 (1) Clone an existing repo (ssh option)
     git clone git@ssh.dev.azure.com:v3/orgname/project-url
-(2) Checkout and create a new branch locally
+(2) See all branches 
+    git branch -a
+(3) Switch to other existing branch 
+    git checkout develop
+(4) Checkout and create a new branch locally
     git checkout -b new-branch-name
-(3) Commit changes
+(5) Commit changes
     git config user.email "email.com"
     git config user.name "user name"
     
     git commit -m "commit comments" file1 file2     
-(4) Push the new branch to repo
+(6) Push the new branch to repo
     git push -u origin new-branch-name
+(7) Display commit history -
+    git log
+(8) Revert to old commit -
+    git revert commit_sha_value
 --------------------------------------------------------------------------------------------
 For a branch (Pull a new branch and push back with new file/s) ::
 (Given that a branch already exists on remote Git)
