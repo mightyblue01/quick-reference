@@ -47,3 +47,6 @@ Docker
 (15) Run docker container with a folder shared with host 
      docker run --rm -v "$PWD":/home -w /home <img_name> 
      (assuming container has a directory /home in this example)
+     
+(16) To debug, get into docker container shell -
+     docker exec -it c_name bin/sh
