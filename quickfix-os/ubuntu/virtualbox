@@ -1,0 +1,9 @@
+To install Guest Addition - 
+(1) Unmount - VM -> Devices -> Optical drives -> Remove disk from virtual drive
+(2) Devices - Insert Guest editions CD Image
+
+If there is kernel header related error, install kernel headers - 
+(1) sudo apt update
+(2) sudo apt install build-essential dkms linux-headers-$(uname -r)
+
+Install from the Guest CD Image and Reboot.
