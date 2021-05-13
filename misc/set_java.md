@@ -26,8 +26,7 @@
 
     nano ~/.zshrc
 
-    #export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
-    export JAVA_HOME='/usr/libexec/java_home -v 1.8.0_291 (x86_64))'
+    export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
 
     Press CTRL+X to exit the editor Press Y to save your changes
 
