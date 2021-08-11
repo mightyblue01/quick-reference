@@ -1,0 +1,3 @@
+ key error e.g.  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 9578539176BAFBC6
+
+ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 9578539176BAFBC6
