@@ -1,37 +1,37 @@
 
-USER SPECIFIC
-git config --global user.name "xxx"
-git config --global user.email "xxx"
+### USER SPECIFIC
+    git config --global user.name "xxx"
+    git config --global user.email "xxx"
 
-git init
-(1) Add a remote repo locally 
-git remote add origin <URL.git>
-(2) Create a new branch
-git checkout -b new_branch
-(3) Pull into the new branch
-git pull origin master
-(4) 
+    git init
+    (1) Add a remote repo locally 
+    git remote add origin <URL.git>
+    (2) Create a new branch
+    git checkout -b new_branch
+    (3) Pull into the new branch
+    git pull origin master
+    (4) 
 
-Examples- 
-(1) Clone an existing repo (ssh option)
-    git clone git@ssh.dev.azure.com:v3/orgname/project-url
-(2) See all branches 
-    git branch -a
-(3) Switch to other existing branch 
-    git checkout develop
-(4) Checkout and create a new branch locally
-    git checkout -b new-branch-name
-(5) Commit changes
-    git config user.email "email.com"
-    git config user.name "user name"
-    
-    git commit -m "commit comments" file1 file2     
-(6) Push the new branch to repo
-    git push -u origin new-branch-name
-(7) Display commit history -
-    git log
-(8) Revert to old commit -
-    git revert commit_sha_value
+    Examples- 
+    (1) Clone an existing repo (ssh option)
+        git clone git@ssh.dev.azure.com:v3/orgname/project-url
+    (2) See all branches 
+        git branch -a
+    (3) Switch to other existing branch 
+        git checkout develop
+    (4) Checkout and create a new branch locally
+        git checkout -b new-branch-name
+    (5) Commit changes
+        git config user.email "email.com"
+        git config user.name "user name"
+
+        git commit -m "commit comments" file1 file2     
+    (6) Push the new branch to repo
+        git push -u origin new-branch-name
+    (7) Display commit history -
+        git log
+    (8) Revert to old commit -
+        git revert commit_sha_value
 --------------------------------------------------------------------------------------------
 For a branch (Pull a new branch and push back with new file/s) ::
 (Given that a branch already exists on remote Git)
@@ -97,3 +97,12 @@ merge request
     
 (5) Add the SSH key to github account
 
+------
+    
+### Delete develop branch history 
+    git checkout --orphan tmp-develop # create a temporary branch
+    git add -A  # Add all files and commit them
+    git commit -m 'Add files'
+    git branch -D develop # Deletes the develop branch
+    git branch -m develop # Rename the current branch to develop
+    git push origin develop # Force push develop branch to Git server
