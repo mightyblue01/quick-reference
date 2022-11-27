@@ -50,3 +50,7 @@ Docker
      
 (16) To debug, get into docker container shell -
      docker exec -it c_name bin/sh
+
+(17) To build
+     docker build  -t ImageName:TagName dir
+     
