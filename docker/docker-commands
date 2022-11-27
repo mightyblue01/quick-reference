@@ -54,3 +54,6 @@ Docker
 (17) To build
      docker build  -t ImageName:TagName dir
      
+(18) Stop and remove all running containers
+     docker stop $(docker ps -a -q)
+     docker rm $(docker ps -a -q)
