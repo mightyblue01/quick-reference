@@ -57,3 +57,6 @@ Docker
 (18) Stop and remove all running containers
      docker stop $(docker ps -a -q)
      docker rm $(docker ps -a -q)
+(19) Add current user to docker group
+     sudo usermod -aG docker $USER
+     newgrp docker
