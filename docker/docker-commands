@@ -3,9 +3,10 @@ Docker
 (1) Pull an image as follows -
     docker pull jupyter/all-spark-notebook 
 
-(2) Command to execute on the docker container -
+(2) Command to execute on the docker container for debugging -
     docker exec -it <command>
     docker exec -it <mycontainer> bash   (this will let you inside the docker container shell)
+    docker exec -u root -it <container> bash (login as root to install any package for debugging)
         
 (3) Restart a container -
     docker restart <name>
@@ -60,3 +61,4 @@ Docker
 (19) Add current user to docker group
      sudo usermod -aG docker $USER
      newgrp docker
+(20) 
