@@ -1,0 +1,8 @@
+## Enable logs for Pytest
+Add following to the pyproject.toml file
+
+    [tool.pytest.ini_options]
+    log_cli = true
+    log_cli_level = "INFO"
+    log_cli_format = "%(asctime)s [%(levelname)8s] %(message)s (%(filename)s:%(lineno)s)"
+    log_cli_date_format = "%Y-%m-%d %H:%M:%S"
