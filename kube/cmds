@@ -1,0 +1,10 @@
+(1) kubectl get pods -o wide 
+(2) Dry run and see/print configs 
+  kubectl run redis --image=redis --dry-run=client -o yaml 
+  kubectl run redis --image=redis --dry-run=client -o yaml > redis.yaml 
+  
+(3) Create pod using yaml 
+  kubectl create -f redis.yaml
+
+(4) Edit pod on the fly
+  kubectl edit podname
